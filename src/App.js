@@ -1,48 +1,16 @@
-import { Button, Container, Input, Paper } from "@mui/material";
-import { ThemeProvider } from "@mui/material/styles";
-import Theme from './styles/Styles';
-import MyButton from './styles/MyButton';
-import { RoundedButton } from './styles/MyButton';
+import Navbar from "./components/Navbar";
+import { ThemeProvider } from "@mui/private-theming";
+import Theme from "./styles/Styles"
+
 
 function App() {
+
   return (
     <ThemeProvider theme={Theme}>
-      <Container
-        sx={{
-          maxWidth: "400px",
-        }}
-      >
-        <Paper
-          sx={{
-            marginTop: "2rem",
-            padding: "1rem",
-          }}
-        >
-          <Input fullWidth placeholder="First Name" />
-          <Input fullWidth placeholder="Last Name" />
-          <Input fullWidth placeholder="Email" />
-          <Input fullWidth placeholder="Website" />
-          <Button
-            sx={{
-              marginTop: "2px",
-            }}
-            variant="contained"
-          >
-            Submit
-          </Button>
-          <RoundedButton
-            color="secondary"
-            sx={{
-              marginTop: "2px",
-            }}
-            variant="contained"
-          >
-            Cancel
-          </RoundedButton>
-        </Paper>
-      </Container>
-    </ThemeProvider>
-  );
-}
+     <Navbar />
+      </ThemeProvider>
+
+)
+};
 
 export default App;
